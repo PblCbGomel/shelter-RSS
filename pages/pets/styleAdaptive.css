@@ -1,0 +1,433 @@
+@media (max-width: 1279px)  {
+    h2 {
+        margin-bottom: 30px;
+    }
+
+    .header-center {
+        padding: 30px 30px;
+        max-width: 768px;
+    }
+
+    .main-center {
+        padding: 80px 94px 76px;
+        max-width: 768px;
+    }
+
+    .table-cards {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 8px;
+    }
+
+    .pet-7, .pet-8 {
+        display: none;
+    }
+
+    /* Contact block */
+
+    .footer-center {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        padding: 15px 50px 0;
+        max-width: 768px;
+    }
+
+    .for-visit {
+        margin-left: 20px;
+    }
+
+    .footer-puppy {
+        margin-top: 65px;
+    }
+
+    /* popup */
+
+    .popup {
+        width: 660px;
+        height: 380px;
+    
+        margin-left: -330px;
+    
+        margin-top: -190px;
+    }
+    
+    .popup-photo {
+        width: 380px;
+        height: 380px;
+        margin-right: 11px;
+    }
+    
+    .popup-info-block {
+        width: 260px;
+        padding-top: 10px;
+    }
+    
+    .popup-info-block h4{
+        line-height: 45.5px;
+    }
+    
+    .popup-info-block .popup-type-pet {
+        line-height: 23px;
+        margin-bottom: 20px;
+    }
+    
+    .popup-info-block .popup-text {
+        font-size: 13px;
+        line-height: 14.3px;
+        margin-bottom: 20px;
+    }
+    
+    .popup-info-block .popup-list li {
+        font-size: 15px;
+        line-height: 16.5px;
+    }
+
+    .btn-popup-exit {    
+        top: -52px;
+        left: 660px;
+    }
+}
+
+@media (max-width: 767px)  {
+    /* Header */
+
+    .black-burger {
+        right: -320px;
+        transition: .3s;
+
+        position: absolute;
+        top: 0;
+        display: block;
+        
+        z-index: 1;
+        width: 100%;
+        height: 100rem;
+        background-color: rgba(0, 0, 0, 0.4);
+        opacity: 0;
+
+        animation: blackBurgerRight;
+        animation-duration: .5s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+    }
+    
+    .black-burger-active {
+        display: block;
+        animation: blackBurgerLeft;
+        animation-duration: .5s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes blackBurgerLeft {
+        0% {
+            right: -320px;
+            opacity: 0;
+        }
+        100% {
+            right: 0;
+            opacity: 1;
+        }
+    }
+
+    @keyframes blackBurgerRight {
+        0% {
+            right: 0;
+        }
+        99% {
+            right: -320px;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .header-center {
+        margin-right: 0;
+        max-width: 320px;
+        padding: 30px 53px 30px 10px;
+        justify-content: right;
+    }
+
+    .logo {
+        z-index: 10;
+        margin-right: 40px;
+    }
+    
+    .desktop-nav {
+        display: none;
+    }
+
+    .burger {
+        position: relative;
+        display: block;
+        z-index: 10;
+
+        margin-top: 19px;
+        width: 30px;
+        height: 30px;
+
+        border-top: 2px solid black;
+
+        transition: .3s;
+    }
+
+    .burger::before {
+        position: absolute;
+        content: "";
+        width: 30px;
+        height: 30px;
+        z-index: 10;
+
+        top: 9px;
+
+        border-top: 2px solid black;
+        
+        transition: .3s;
+    }
+
+    .burger-nav-none, .black-burger-none {
+        display: none;
+    }
+    
+    .burger::after {
+        position: absolute;
+        content: "";
+        width: 30px;
+        height: 30px;
+        z-index: 10;
+        
+        top: 20px;
+
+        border-top: 2px solid black;
+        
+        transition: .3s;
+    }
+
+    .burger-active {
+        transform: rotate(90deg) translate(-4px, 3px);
+        transition: .3s;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .burger-nav {
+        right: -320px;
+        transition: .3s;
+
+        position: absolute;
+        z-index: 5;
+        top: 0;
+        display: block;
+
+        background-color: #ffffff;
+        width: 320px;
+        height: 100rem;
+        
+        animation: burgerRight;
+        animation-duration: .5s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+    }
+
+    .burger-nav-unvis {
+        transition: .3s;
+        animation: burgerLeft;
+        animation-duration: .5s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes burgerLeft {
+        0% {
+            right: -320px;
+            opacity: 0;
+        }
+        100% {
+            right: 0;
+            opacity: 1;
+        }
+    }
+
+    @keyframes burgerRight {
+        0% {
+            right: 0;
+        }
+        99% {
+            right: -320px;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .burger-nav ul {
+        display: flex;
+        flex-direction: column;
+
+        text-decoration: none;
+
+        padding: 248px 0 0 38px;
+
+        width: calc(100% - 38px);
+    }
+
+    .active::before {
+        width: 125px;
+        left: 100px;
+        top: 390px;
+    }
+
+    .burger-nav ul li a{
+        font-size: 32px;
+        line-height: 1.6em;
+    }
+
+    .burger-nav ul li {
+        margin-bottom: 42px;
+    } 
+
+    .burger-nav-unvis-active {
+        display: block;
+        right: 0;
+    }
+
+    /* Main */
+
+    h2 {
+        margin-bottom: 42px;
+        font-size: 25px;
+        line-height: 32.5px;
+        text-align: center;
+        max-width: 300px;
+    }
+
+    .main-center {
+        padding: 42px 10px;
+    }
+
+    .pet-6, .pet-5, .pet-4 {
+        display: none;
+    }
+
+    .table-cards {
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+    }
+
+    .pet-card {
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    .buttons {
+        max-width: 300px;
+    }
+
+    .buttons .card-btn, .buttons .page-number {
+        width: 52px;
+        height: 52px;
+    }
+
+    /* Contact block */
+
+    .footer-center {
+        padding: 15px 30px 0;
+        max-width: 320px;
+        align-items: center;
+    }
+
+    .for-visit h3, .for-questions h3 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .for-visit , .for-questions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .info {
+        justify-content: center;
+        margin-top: 40px
+    }
+
+    .for-questions .info-text a{
+        max-width: 191px;
+    }
+
+    .telephone-icon {
+        margin-left: 5px;
+    }
+
+    .for-visit {
+        margin: 25px 0 0;
+    }
+
+    .for-visit .info {
+        margin-top: 30px
+    }
+
+    .for-visit h3 {
+        margin-bottom: 8px;
+    }
+
+    .for-visit .pin-2-info {
+        margin-top: 35px
+    }
+
+    .footer-puppy {
+        margin-top: 40px;
+        width: 260px;
+        height: 269px;
+    }
+
+    /* popup */
+
+    .popup {
+        width: 240px;
+        height: auto;
+    
+        margin-left: -120px;
+    
+        margin-top: calc(auto/2);
+        padding-bottom: 10px;
+    }
+    
+    .popup-photo {
+        display: none;
+    }
+    
+    .popup-info-block {
+        width: 220px;
+        padding-top: 10px;
+        margin-left: 10px;
+    }
+
+    .popup-info-block h4 {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    .popup-info-block .popup-type-pet {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .popup-info-block .popup-text {
+        text-align: justify;
+    }
+
+    .popup-info-block .popup-list li {
+        margin-bottom: -2px;
+    }
+
+    .btn-popup-exit {    
+        top: -55px;
+        left: 210px;
+    }
+}
